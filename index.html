@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lalit Web Expert | SEO & Web Designer</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --primary: #f97316;
+      --secondary: #a855f7;
+      --bg-light: #fdf2f8;
+      --text-dark: #1f2937;
+      --white: #ffffff;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+      color: var(--text-dark);
+      overflow-x:hidden;
+      scroll-behavior:smooth;
+    }
+
+    img{
+      max-width:100%;
+    }
+
+    section{
+      padding:70px 20px;
+    }
+
+    .container{
+      max-width:1200px;
+      margin:auto;
+    }
+
+    .section-box{
+      background:#fff;
+      border-radius:20px;
+      padding:45px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+      animation:fadeUp 1s ease;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:2.2rem;
+      color:var(--primary);
+      margin-bottom:20px;
+      font-weight:700;
+    }
+
+    .section-subtitle{
+      text-align:center;
+      max-width:700px;
+      margin:auto;
+      margin-bottom:40px;
+      color:#555;
+    }
+
+    header{
+      background:linear-gradient(to right, #f97316, #a855f7);
+      color:white;
+      padding:25px 20px;
+      position:sticky;
+      top:0;
+      z-index:999;
+      box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    }
+
+    nav{
+      max-width:1200px;
+      margin:auto;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .logo{
+      font-size:1.8rem;
+      font-weight:700;
+    }
+
+    nav ul{
+      display:flex;
+      gap:20px;
+      list-style:none;
+      flex-wrap:wrap;
+    }
+
+    nav ul li a{
+      color:white;
+      text-decoration:none;
+      font-weight:500;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#ffe7d2;
+    }
+
+    .hero{
+      padding:80px 20px;
+    }
+
+    .hero-content{
+      max-width:1200px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:40px;
+      align-items:center;
+    }
+
+    .hero-text h1{
+      font-size:3.4rem;
+      line-height:1.2;
+      margin-bottom:20px;
+      color:#1f2937;
+    }
+
+    .hero-text h1 span{
+      color:var(--secondary);
+    }
+
+    .hero-text p{
+      font-size:1.1rem;
+      margin-bottom:30px;
+      line-height:1.8;
+      color:#444;
+    }
+
+    .hero-btns{
+      display:flex;
+      gap:15px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:14px 28px;
+      border-radius:50px;
+      text-decoration:none;
+      font-weight:600;
+      transition:0.3s;
+      display:inline-block;
+    }
+
+    .btn-primary{
+      background:var(--primary);
+      color:white;
+    }
+
+    .btn-primary:hover{
+      background:var(--secondary);
+      transform:translateY(-3px);
+    }
+
+    .btn-secondary{
+      background:white;
+      color:var(--secondary);
+    }
+
+    .btn-secondary:hover{
+      transform:translateY(-3px);
+    }
+
+    .hero-image{
+      text-align:center;
+    }
+
+    .hero-image img{
+      width:100%;
+      max-width:420px;
+      border-radius:25px;
+      box-shadow:0 15px 35px rgba(0,0,0,0.15);
+    }
+
+    .stats{
+      margin-top:35px;
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .stat-box{
+      background:white;
+      padding:20px;
+      border-radius:18px;
+      min-width:140px;
+      text-align:center;
+      box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .stat-box h3{
+      color:var(--primary);
+      font-size:2rem;
+    }
+
+    .services-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+      margin-top:40px;
+    }
+
+    .service-card{
+      background:var(--bg-light);
+      padding:30px;
+      border-radius:20px;
+      transition:0.3s;
+    }
+
+    .service-card:hover{
+      transform:translateY(-10px);
+    }
+
+    .service-card i{
+      font-size:2.5rem;
+      color:var(--secondary);
+      margin-bottom:20px;
+    }
+
+    .service-card h3{
+      margin-bottom:15px;
+      color:#1f2937;
+    }
+
+    .skills-list{
+      display:flex;
+      flex-wrap:wrap;
+      gap:15px;
+      justify-content:center;
+      margin-top:30px;
+    }
+
+    .skills-list span{
+      background:var(--secondary);
+      color:white;
+      padding:12px 22px;
+      border-radius:50px;
+      font-weight:500;
+    }
+
+    .portfolio-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:30px;
+      margin-top:40px;
+    }
+
+    .portfolio-card{
+      background:var(--bg-light);
+      border-radius:20px;
+      overflow:hidden;
+      transition:0.3s;
+    }
+
+    .portfolio-card:hover{
+      transform:translateY(-10px);
+    }
+
+    .portfolio-content{
+      padding:25px;
+    }
+
+    .portfolio-content h3{
+      margin-bottom:10px;
+      color:var(--secondary);
+    }
+
+    .portfolio-content p{
+      margin-bottom:12px;
+      line-height:1.7;
+      color:#444;
+    }
+
+    .portfolio-links{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:15px;
+    }
+
+    .portfolio-links a{
+      text-decoration:none;
+      background:var(--primary);
+      color:white;
+      padding:10px 18px;
+      border-radius:40px;
+      font-size:14px;
+      transition:0.3s;
+    }
+
+    .portfolio-links a:hover{
+      background:var(--secondary);
+    }
+
+    .chart-bars{
+      margin-top:15px;
+    }
+
+    .bar{
+      margin-bottom:15px;
+    }
+
+    .bar span{
+      display:block;
+      margin-bottom:6px;
+      font-size:14px;
+      font-weight:600;
+    }
+
+    .progress{
+      width:100%;
+      height:12px;
+      background:#ddd;
+      border-radius:30px;
+      overflow:hidden;
+    }
+
+    .progress div{
+      height:100%;
+      border-radius:30px;
+      background:linear-gradient(to right,#f97316,#a855f7);
+    }
+
+    .tools-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:20px;
+      margin-top:40px;
+    }
+
+    .tool-card{
+      background:var(--bg-light);
+      padding:25px;
+      border-radius:18px;
+      text-align:center;
+      transition:0.3s;
+    }
+
+    .tool-card:hover{
+      transform:translateY(-8px);
+    }
+
+    .tool-card i{
+      font-size:2rem;
+      margin-bottom:15px;
+      color:var(--secondary);
+    }
+
+    .testimonials{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
+      margin-top:40px;
+    }
+
+    .testimonial-card{
+      background:var(--bg-light);
+      padding:30px;
+      border-radius:20px;
+    }
+
+    .testimonial-card p{
+      line-height:1.8;
+      margin-bottom:15px;
+    }
+
+    .stars{
+      color:#ff9800;
+      margin-bottom:10px;
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:30px;
+      margin-top:40px;
+    }
+
+    form{
+      display:flex;
+      flex-direction:column;
+      gap:15px;
+    }
+
+    input, textarea{
+      padding:14px 18px;
+      border-radius:12px;
+      border:1px solid #ddd;
+      font-size:1rem;
+    }
+
+    button{
+      padding:14px;
+      border:none;
+      border-radius:12px;
+      background:var(--primary);
+      color:white;
+      font-size:1rem;
+      font-weight:600;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    button:hover{
+      background:var(--secondary);
+    }
+
+    .contact-info p{
+      margin-bottom:18px;
+      line-height:1.8;
+    }
+
+    .contact-info a{
+      color:var(--secondary);
+      text-decoration:none;
+    }
+
+    .social-icons{
+      display:flex;
+      gap:20px;
+      margin-top:25px;
+      flex-wrap:wrap;
+    }
+
+    .social-icons a{
+      width:55px;
+      height:55px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:var(--secondary);
+      color:white;
+      border-radius:50%;
+      font-size:1.4rem;
+      transition:0.3s;
+      text-decoration:none;
+    }
+
+    .social-icons a:hover{
+      background:var(--primary);
+      transform:translateY(-5px);
+    }
+
+    footer{
+      text-align:center;
+      padding:30px 20px;
+      color:white;
+      font-weight:500;
+    }
+
+    @keyframes fadeUp{
+      from{
+        opacity:0;
+        transform:translateY(40px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    @media(max-width:768px){
+
+      .hero{
+        padding:50px 20px;
+      }
+
+      .hero-text h1{
+        font-size:2.4rem;
+      }
+
+      .section-box{
+        padding:30px 20px;
+      }
+
+      .section-title{
+        font-size:1.8rem;
+      }
+
+      nav{
+        justify-content:center;
+        gap:15px;
+      }
+
+      nav ul{
+        justify-content:center;
+      }
+
+      .stats{
+        justify-content:center;
+      }
+
+      .hero-btns{
+        justify-content:center;
+      }
+
+      .hero-text{
+        text-align:center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <div class="logo">Lalit Web Expert</div>
+
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+
+    <div class="hero-text">
+      <h1>SEO Expert & <span>Web Designer</span> Helping Businesses Grow Worldwide 🚀</h1>
+
+      <p>
+        Hi, I'm Lalit Web Expert. I help businesses grow online through advanced SEO strategies, modern website design, and high-converting digital experiences. I have worked on international projects, travel websites, business websites, real estate websites, and SEO campaigns for global clients.
+      </p>
+
+      <div class="hero-btns">
+        <a href="#portfolio" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-secondary">Hire Me</a>
+      </div>
+
+      <div class="stats">
+
+        <div class="stat-box">
+          <h3>25+</h3>
+          <p>Websites Created</p>
+        </div>
+
+        <div class="stat-box">
+          <h3>2+</h3>
+          <p>Years SEO Experience</p>
+        </div>
+
+        <div class="stat-box">
+          <h3>8+</h3>
+          <p>Freelance Projects</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="lalit.png" alt="Lalit Web Expert">
+    </div>
+
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="section-box">
+
+      <h2 class="section-title">Services Offered</h2>
+
+      <p class="section-subtitle">
+        Complete SEO & Website Solutions For Businesses, Agencies & Startups.
+      </p>
+
+      <div class="services-grid">
+
+        <div class="service-card">
+          <i class="fas fa-chart-line"></i>
+          <h3>SEO Optimization</h3>
+          <p>On-page SEO, Technical SEO, Local SEO, Off-page SEO, Keyword Research, SEO Audit & Ranking Improvements.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-laptop-code"></i>
+          <h3>Website Design</h3>
+          <p>Modern business websites, travel websites, portfolio websites, booking websites & responsive landing pages.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-bolt"></i>
+          <h3>Speed Optimization</h3>
+          <p>Website speed improvements, Core Web Vitals optimization & mobile performance enhancements.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-globe"></i>
+          <h3>Global SEO</h3>
+          <p>International SEO strategies for businesses targeting global markets and worldwide audiences.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-search"></i>
+          <h3>Google Ranking</h3>
+          <p>Complete optimization strategies to improve visibility, keyword ranking & organic traffic growth.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-mobile-screen"></i>
+          <h3>Responsive Design</h3>
+          <p>Fully mobile-friendly and SEO-optimized websites with smooth user experience on all devices.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="portfolio">
+  <div class="container">
+    <div class="section-box">
+
+      <h2 class="section-title">Case Studies & Projects</h2>
+
+      <p class="section-subtitle">
+        Real Projects, Real Results & SEO Growth Strategies.
+      </p>
+
+      <div class="portfolio-grid">
+
+        <div class="portfolio-card">
+          <div class="portfolio-content">
+
+            <h3>Lendersa Inc</h3>
+
+            <p><strong>Client Requirement:</strong> Improve SEO visibility and generate more mortgage leads in USA market.</p>
+
+            <p><strong>What I Did:</strong> Technical SEO, keyword optimization, schema implementation, speed optimization & content SEO.</p>
+
+            <p><strong>SEO Impact:</strong> Better rankings, increased organic visibility & improved website performance.</p>
+
+            <div class="chart-bars">
+
+              <div class="bar">
+                <span>Organic Traffic Growth</span>
+                <div class="progress">
+                  <div style="width:88%"></div>
+                </div>
+              </div>
+
+              <div class="bar">
+                <span>Keyword Ranking Improvement</span>
+                <div class="progress">
+                  <div style="width:82%"></div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="portfolio-links">
+              <a href="https://www.lendersa.com/" target="_blank">Live Website</a>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="portfolio-card">
+          <div class="portfolio-content">
+
+            <h3>Binick Imaging</h3>
+
+            <p><strong>Client Requirement:</strong> Increase online visibility for printing & signage services.</p>
+
+            <p><strong>What I Did:</strong> Website optimization, local SEO, technical fixes & conversion-focused improvements.</p>
+
+            <p><strong>SEO Impact:</strong> Better local reach, improved engagement & stronger search visibility.</p>
+
+            <div class="chart-bars">
+
+              <div class="bar">
+                <span>Local SEO Growth</span>
+                <div class="progress">
+                  <div style="width:84%"></div>
+                </div>
+              </div>
+
+              <div class="bar">
+                <span>Website Performance</span>
+                <div class="progress">
+                  <div style="width:79%"></div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="portfolio-links">
+              <a href="https://www.binickimaging.com/" target="_blank">Live Website</a>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="portfolio-card">
+          <div class="portfolio-content">
+
+            <h3>Tajraj Events</h3>
+
+            <p><strong>Client Requirement:</strong> Create a premium event business website for Dubai audience.</p>
+
+            <p><strong>What I Did:</strong> Modern UI design, SEO optimization & responsive business website development.</p>
+
+            <p><strong>SEO Impact:</strong> Better branding, enhanced user experience & improved mobile performance.</p>
+
+            <div class="chart-bars">
+
+              <div class="bar">
+                <span>Mobile Optimization</span>
+                <div class="progress">
+                  <div style="width:90%"></div>
+                </div>
+              </div>
+
+              <div class="bar">
+                <span>User Experience</span>
+                <div class="progress">
+                  <div style="width:87%"></div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="portfolio-links">
+              <a href="https://tajraj.events/" target="_blank">Live Website</a>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="portfolio-card">
+          <div class="portfolio-content">
+
+            <h3>Lakhchaura Property</h3>
+
+            <p><strong>Client Requirement:</strong> Real estate website for property listing and lead generation.</p>
+
+            <p><strong>What I Did:</strong> Responsive design, SEO structure, lead-focused landing pages & optimization.</p>
+
+            <p><strong>SEO Impact:</strong> Improved property visibility and better search indexing.</p>
+
+            <div class="chart-bars">
+
+              <div class="bar">
+                <span>Lead Conversion</span>
+                <div class="progress">
+                  <div style="width:81%"></div>
+                </div>
+              </div>
+
+              <div class="bar">
+                <span>SEO Structure</span>
+                <div class="progress">
+                  <div style="width:86%"></div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="portfolio-links">
+              <a href="https://lakhchaura.property/" target="_blank">Live Website</a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="container">
+    <div class="section-box">
+
+      <h2 class="section-title">Skills & Tools</h2>
+
+      <p class="section-subtitle">
+        Professional SEO, Web Design & Optimization Tools I Use.
+      </p>
+
+      <div class="skills-list">
+
+        <span>Technical SEO</span>
+        <span>On Page SEO</span>
+        <span>Local SEO</span>
+        <span>Keyword Research</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>WordPress</span>
+        <span>Elementor</span>
+        <span>Responsive Design</span>
+        <span>Google Analytics</span>
+        <span>Search Console</span>
+        <span>Ahrefs</span>
+        <span>SEMrush</span>
+        <span>Canva</span>
+        <span>Schema Markup</span>
+
+      </div>
+
+      <div class="tools-grid">
+
+        <div class="tool-card">
+          <i class="fab fa-wordpress"></i>
+          <h3>WordPress</h3>
+        </div>
+
+        <div class="tool-card">
+          <i class="fab fa-google"></i>
+          <h3>Google Analytics</h3>
+        </div>
+
+        <div class="tool-card">
+          <i class="fas fa-search"></i>
+          <h3>Search Console</h3>
+        </div>
+
+        <div class="tool-card">
+          <i class="fas fa-chart-pie"></i>
+          <h3>SEMrush</h3>
+        </div>
+
+        <div class="tool-card">
+          <i class="fas fa-code"></i>
+          <h3>HTML/CSS</h3>
+        </div>
+
+        <div class="tool-card">
+          <i class="fab fa-elementor"></i>
+          <h3>Elementor</h3>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-box">
+
+      <h2 class="section-title">Client Trust & Testimonials</h2>
+
+      <div class="testimonials">
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>
+            Lalit delivered an excellent SEO strategy and improved our website visibility significantly. Great communication and professional work.
+          </p>
+          <h4>- International Client</h4>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>
+            Amazing website design and mobile optimization. The website looks modern and performs really well.
+          </p>
+          <h4>- Business Owner</h4>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>
+            Professional SEO work, fast delivery and very supportive throughout the project. Highly recommended.
+          </p>
+          <h4>- Freelance Client</h4>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="section-box">
+
+      <h2 class="section-title">Contact Me</h2>
+
+      <div class="contact-grid">
+
+        <div>
+
+          <form action="https://formspree.io/f/xqenblno" method="POST">
+
+            <input type="text" name="name" placeholder="Your Name" required>
+
+            <input type="email" name="email" placeholder="Your Email" required>
+
+            <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+
+            <button type="submit">Send Message</button>
+
+          </form>
+
+        </div>
+
+        <div class="contact-info">
+
+          <p><strong>Email:</strong> <a href="mailto:lalitwebe@gmail.com">lalitwebe@gmail.com</a></p>
+
+          <p><strong>Phone:</strong> <a href="tel:9873579994">9873579994</a></p>
+
+          <p><strong>Location:</strong> Ramnagar, Uttarakhand, India</p>
+
+          <p><strong>Experience:</strong> 2+ Years SEO Experience & 25+ Websites Designed</p>
+
+          <div class="social-icons">
+
+            <a href="https://www.instagram.com/lalit_web_expert/?hl=en" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/lalit-lakhchaura-610b13355/" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+
+            <a href="https://www.fiverr.com/s/xX8a5vX" target="_blank">
+              <i class="fas fa-briefcase"></i>
+            </a>
+
+            <a href="https://github.com/" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 Lalit Web Expert | SEO Expert & Web Designer
+</footer>
+
+</body>
+</html>
