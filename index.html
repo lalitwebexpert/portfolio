@@ -512,6 +512,163 @@
         text-align:center;
       }
     }
+
+    .v-pricing {
+    padding: 70px 20px;
+}
+.v-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.v-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    font-weight: 700;
+    margin-bottom: 5px;
+    letter-spacing: -0.5px;
+}
+.v-subtitle {
+    text-align: center;
+    color: #4b5563;
+    font-size: 1rem;
+    margin-bottom: 50px;
+}
+.v-cluster {
+    margin-bottom: 50px;
+}
+.v-heading {
+    font-size: 1.6rem;
+    color: var(--text-dark);
+    margin-bottom: 30px;
+    font-weight: 700;
+    border-left: 5px solid var(--primary);
+    padding-left: 12px;
+}
+.v-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+.v-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
+    padding: 35px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.v-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(249, 115, 22, 0.15);
+}
+.v-featured {
+    border: 2px solid var(--primary);
+    background: var(--white);
+    box-shadow: 0 15px 30px rgba(249, 115, 22, 0.1);
+}
+.v-badge {
+    position: absolute;
+    top: -12px;
+    right: 25px;
+    background: var(--secondary);
+    color: var(--white);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 14px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(168, 85, 247, 0.2);
+}
+.v-tier {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    display: block;
+    margin-bottom: 8px;
+}
+.v-price {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+.v-plus {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-left: 2px;
+}
+.v-desc {
+    color: #4b5563;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+.v-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+    flex-grow: 1;
+}
+.v-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+.v-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--primary);
+    font-weight: 900;
+    font-size: 1.1rem;
+}
+.v-btn {
+    display: block;
+    text-align: center;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    background: transparent;
+    transition: all 0.2s ease;
+}
+.v-btn:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+.v-btn-filled {
+    background: var(--primary);
+    color: var(--white);
+}
+.v-btn-filled:hover {
+    background: #ea580c;
+    border-color: #ea580c;
+}
+@media (max-width: 768px) {
+    .v-title {
+        font-size: 2rem;
+    }
+    .v-heading {
+        font-size: 1.4rem;
+    }
+    .v-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
   </style>
 </head>
 
@@ -943,6 +1100,127 @@
     </div>
   </div>
 </section>
+
+<section class="v-pricing">
+    <div class="v-container">
+        
+        <h2 class="v-title">Transparent Pricing</h2>
+        <p class="v-subtitle">Affordable web and SEO solutions tailored to grow your business.</p>
+
+        <div class="v-cluster">
+            <h3 class="v-heading">WordPress Services</h3>
+            <div class="v-grid">
+                
+                <div class="v-card">
+                    <div class="v-card-body">
+                        <span class="v-tier">Starter</span>
+                        <div class="v-price">₹4,999<span class="v-plus">+</span></div>
+                        <p class="v-desc">Perfect for Individuals or Small Projects</p>
+                    </div>
+                    <ul class="v-list">
+                        <li>Single Landing Page</li>
+                        <li>Responsive Web Design</li>
+                        <li>Contact Form & Social Integration</li>
+                        <li>Basic Speed Optimization</li>
+                    </ul>
+                    <a href="#contact" class="v-btn">Choose Starter</a>
+                </div>
+
+                <div class="v-card v-featured">
+                    <span class="v-badge">Recommended</span>
+                    <div class="v-card-body">
+                        <span class="v-tier">Professional</span>
+                        <div class="v-price">₹9,999<span class="v-plus">+</span></div>
+                        <p class="v-desc">Most Popular Choice for Growing Businesses</p>
+                    </div>
+                    <ul class="v-list">
+                        <li>Up to 7 Pages (Home, About, Services, etc.)</li>
+                        <li>Elementor / Custom Theme Setup</li>
+                        <li>Basic E-commerce (Up to 10 products)</li>
+                        <li>Core Web Vitals Optimization</li>
+                        <li>1 Month Dedicated Support</li>
+                    </ul>
+                    <a href="#contact" class="v-btn v-btn-filled">Choose Professional</a>
+                </div>
+
+                <div class="v-card">
+                    <div class="v-card-body">
+                        <span class="v-tier">Enterprise</span>
+                        <div class="v-price">Custom</div>
+                        <p class="v-desc">For Complex, Large Scale Web Applications</p>
+                    </div>
+                    <ul class="v-list">
+                        <li>Unlimited Pages & Premium Features</li>
+                        <li>Advanced Multi-vendor / E-commerce</li>
+                        <li>API & Custom Payment Gateways</li>
+                        <li>Priority Support & Server Setup</li>
+                    </ul>
+                    <a href="#contact" class="v-btn">Get A Quote</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="v-cluster">
+            <h3 class="v-heading">SEO Services (Search Engine Optimization)</h3>
+            <div class="v-grid">
+                
+                <div class="v-card">
+                    <div class="v-card-body">
+                        <span class="v-tier">Basic SEO</span>
+                        <div class="v-price">₹3,999<span class="v-plus">+</span></div>
+                        <p class="v-desc">Perfect for Core SEO & New Websites</p>
+                    </div>
+                    <ul class="v-list">
+                        <li>Technical Website Audit</li>
+                        <li>In-depth Keyword Research</li>
+                        <li>On-Page SEO Optimization</li>
+                        <li>XML Sitemap & Robots.txt Submission</li>
+                        <li>Google Search Console Setup</li>
+                    </ul>
+                    <a href="#contact" class="v-btn">Choose Basic</a>
+                </div>
+
+                <div class="v-card v-featured">
+                    <span class="v-badge">Best Value</span>
+                    <div class="v-card-body">
+                        <span class="v-tier">WordPress SEO</span>
+                        <div class="v-price">₹9,999<span class="v-plus">+</span></div>
+                        <p class="v-desc">Best for WP-Based Sites Comprehensive Plan</p>
+                    </div>
+                    <ul class="v-list">
+                        <li>Complete SEO(On Page, Off Page, Technical SEO)</li>
+                        <li>RankMath / Yoast SEO Deep Configuration</li>
+                        <li>Internal Linking Strategy & Site Structure</li>
+                        <li>Schema Markup & Structured Data</li>
+                        <li>Local SEO & GMB Optimization</li>
+                    </ul>
+                    <a href="#contact" class="v-btn v-btn-filled">Choose WP SEO</a>
+                </div>
+
+                <div class="v-card">
+                    <div class="v-card-body">
+                        <span class="v-tier">PHP/HTML SEO</span>
+                        <div class="v-price">Custom</div>
+                        <p class="v-desc">Advanced for Custom Hand-Coded Sites</p>
+                    </div>
+                    <ul class="v-list">
+                        <li>SEO Friendly URL Structure (.htaccess)</li>
+        <li>Meta Title & Description Setup</li>
+        <li>Header Tags Optimization (H1-H6)</li>
+        <li>Image Alt Tags & Compression</li>
+        <li>XML Sitemap & Robots.txt Creation</li>
+        <li>Website Loading Speed Improvement</li>
+                    </ul>
+                    <a href="#contact" class="v-btn">Get A Quote</a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
 
 <section id="contact">
   <div class="container">
