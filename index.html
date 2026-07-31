@@ -669,6 +669,118 @@
     }
 }
 
+
+
+/* ==========================================================================
+   Proven Keyword Rankings Section Style (Matches Your Theme Exactly)
+   ========================================================================== */
+#proven-rankings {
+  padding: 80px 20px;
+  background-color: #ffffff; /* Same clean background as services */
+}
+
+.rankings-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.rankings-header h2 {
+  color: #ff6600; /* Your Brand Main Orange */
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.rankings-header p {
+  color: #666666;
+  font-size: 1.1rem;
+}
+
+/* Fluid responsive grid for keyword group cards */
+.rankings-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual card styling using your background tint */
+.ranking-group-card {
+  background-color: #fdf6ff; /* Matches your light purple/pink cards background */
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid rgba(168, 85, 247, 0.05);
+  box-shadow: 0 4px 20px rgba(168, 85, 247, 0.02);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ranking-group-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(168, 85, 247, 0.06);
+}
+
+.group-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.group-icon {
+  font-size: 1.5rem;
+}
+
+.ranking-group-card h3 {
+  color: #111111;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Flexible wrap layout for mobile friendliness */
+.keywords-badge-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* White background modern tags layout for keywords */
+.keyword-badge {
+  background-color: #ffffff;
+  color: #444444;
+  border: 1px solid #e9d5ff; /* Subtle purple border matching theme accents */
+  padding: 6px 14px;
+  border-radius: 30px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  line-height: 1.4;
+  transition: all 0.2s ease;
+}
+
+.keyword-badge:hover {
+  border-color: #ff6600; /* Changes to your brand orange on hover */
+  color: #ff6600;
+}
+
+/* Touch targets and font responsive controls for mobile screens */
+@media (max-width: 768px) {
+  #proven-rankings {
+    padding: 50px 15px;
+  }
+  .rankings-header h2 {
+    font-size: 1.8rem;
+  }
+  .ranking-group-card {
+    padding: 22px;
+  }
+  .keyword-badge {
+    font-size: 0.82rem;
+    padding: 5px 12px;
+  }
+}
+
+
   </style>
 </head>
 
@@ -729,79 +841,64 @@
   </div>
 </section>
 
-<!-- Services Offered Section -->
-<section id="services" style="padding: 60px 20px; font-family: sans-serif;">
-  <div style="text-align: center; margin-bottom: 50px;">
-    <h2 style="color: #ff6600; font-size: 32px; margin-bottom: 10px; font-weight: bold;">Services Offered</h2>
-    <p style="color: #666; font-size: 16px;">Complete SEO, AEO, GEO & Website Solutions For Businesses, Agencies & Startups.</p>
-  </div>
+<section id="services">
+  <div class="container">
+    <div class="section-box">
 
-  <!-- Services Grid Layer -->
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; max-width: 1200px; margin: 0 auto;">
-    
-    <!-- 1. SEO Optimization (Existing) -->
-    <div class="service-card" style="background: #fdf6ff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: transform 0.3s;">
-      <div style="color: #a855f7; font-size: 30px; margin-bottom: 15px;">📈</div>
-      <h3 style="color: #111; font-size: 20px; margin-bottom: 12px; font-weight: bold;">SEO Optimization</h3>
-      <p style="color: #444; font-size: 14px; line-height: 1.6;">On-page SEO, Technical SEO, Local SEO, Off-page SEO, Keyword Research, SEO Audit & Ranking Improvements.</p>
+      <h2 class="section-title">Services Offered</h2>
+
+      <p class="section-subtitle">
+        Complete SEO & Website Solutions For Businesses, Agencies & Startups.
+      </p>
+
+      <div class="services-grid">
+
+        <div class="service-card">
+          <i class="fas fa-chart-line"></i>
+          <h3>SEO Optimization</h3>
+          <p>On-page SEO, Technical SEO, Local SEO, Off-page SEO, Keyword Research, SEO Audit & Ranking Improvements.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-laptop-code"></i>
+          <h3>Website Design</h3>
+          <p>Modern business websites, travel websites, portfolio websites, booking websites & responsive landing pages.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-bolt"></i>
+          <h3>Speed Optimization</h3>
+          <p>Website speed improvements, Core Web Vitals optimization & mobile performance enhancements.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-globe"></i>
+          <h3>Global SEO</h3>
+          <p>International SEO strategies for businesses targeting global markets and worldwide audiences.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-search"></i>
+          <h3>Google Ranking</h3>
+          <p>Complete optimization strategies to improve visibility, keyword ranking & organic traffic growth.</p>
+        </div>
+
+        <div class="service-card">
+          <i class="fas fa-mobile-screen"></i>
+          <h3>Responsive Design</h3>
+          <p>Fully mobile-friendly and SEO-optimized websites with smooth user experience on all devices.</p>
+        </div>
+
+        <div class="service-card">
+  <i class="fas fa-code"></i>
+  <h3>Custom PHP SEO</h3>
+  <p>Advanced server-side optimization for custom PHP websites. Specializing in .htaccess URL rewriting, database-driven meta tags, canonical logic, and dynamic XML sitemaps.</p>
+</div>
+
+
+      </div>
+
     </div>
-
-    <!-- 2. Website Design (Existing) -->
-    <div class="service-card" style="background: #fdf6ff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: transform 0.3s;">
-      <div style="color: #a855f7; font-size: 30px; margin-bottom: 15px;">💻</div>
-      <h3 style="color: #111; font-size: 20px; margin-bottom: 12px; font-weight: bold;">Website Design</h3>
-      <p style="color: #444; font-size: 14px; line-height: 1.6;">Modern business websites, travel websites, portfolio websites, booking websites & responsive landing pages.</p>
-    </div>
-
-    <!-- 3. Speed Optimization (Existing) -->
-    <div class="service-card" style="background: #fdf6ff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: transform 0.3s;">
-      <div style="color: #a855f7; font-size: 30px; margin-bottom: 15px;">⚡</div>
-      <h3 style="color: #111; font-size: 20px; margin-bottom: 12px; font-weight: bold;">Speed Optimization</h3>
-      <p style="color: #444; font-size: 14px; line-height: 1.6;">Website speed improvements, Core Web Vitals optimization & mobile performance enhancements.</p>
-    </div>
-
-    <!-- 4. Global SEO (Existing) -->
-    <div class="service-card" style="background: #fdf6ff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: transform 0.3s;">
-      <div style="color: #a855f7; font-size: 30px; margin-bottom: 15px;">🌐</div>
-      <h3 style="color: #111; font-size: 20px; margin-bottom: 12px; font-weight: bold;">Global SEO</h3>
-      <p style="color: #444; font-size: 14px; line-height: 1.6;">International SEO strategies for businesses targeting global markets and worldwide audiences.</p>
-    </div>
-
-    <!-- 5. Google Ranking (Existing) -->
-    <div class="service-card" style="background: #fdf6ff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: transform 0.3s;">
-      <div style="color: #a855f7; font-size: 30px; margin-bottom: 15px;">🔍</div>
-      <h3 style="color: #111; font-size: 20px; margin-bottom: 12px; font-weight: bold;">Google Ranking</h3>
-      <p style="color: #444; font-size: 14px; line-height: 1.6;">Complete optimization strategies to improve visibility, keyword ranking & organic traffic growth.</p>
-    </div>
-
-    <!-- 6. Responsive Design (Existing) -->
-    <div class="service-card" style="background: #fdf6ff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: transform 0.3s;">
-      <div style="color: #a855f7; font-size: 30px; margin-bottom: 15px;">📱</div>
-      <h3 style="color: #111; font-size: 20px; margin-bottom: 12px; font-weight: bold;">Responsive Design</h3>
-      <p style="color: #444; font-size: 14px; line-height: 1.6;">Fully mobile-friendly and SEO-optimized websites with smooth user experience on all devices.</p>
-    </div>
-
-    <!-- 7. NEW: Answer Engine Optimization (AEO) -->
-    <div class="service-card" style="background: #fdf6ff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: transform 0.3s;">
-      <div style="color: #a855f7; font-size: 30px; margin-bottom: 15px;">💬</div>
-      <h3 style="color: #111; font-size: 20px; margin-bottom: 12px; font-weight: bold;">AEO Optimization</h3>
-      <p style="color: #444; font-size: 14px; line-height: 1.6;">Structuring data and conversational content to secure instant answers in Google Featured Snippets and Voice Search.</p>
-    </div>
-
-    <!-- 8. NEW: Generative Engine Optimization (GEO) -->
-    <div class="service-card" style="background: #fdf6ff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: transform 0.3s;">
-      <div style="color: #a855f7; font-size: 30px; margin-bottom: 15px;">🤖</div>
-      <h3 style="color: #111; font-size: 20px; margin-bottom: 12px; font-weight: bold;">GEO Optimization</h3>
-      <p style="color: #444; font-size: 14px; line-height: 1.6;">Optimizing web authority to gain direct brand citations and references inside AI engines like ChatGPT, Gemini, and Perplexity.</p>
-    </div>
-
-    <!-- 9. Custom PHP SEO (Existing) -->
-    <div class="service-card" style="background: #fdf6ff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); transition: transform 0.3s;">
-      <div style="color: #a855f7; font-size: 30px; margin-bottom: 15px;">&lt;/&gt;</div>
-      <h3 style="color: #111; font-size: 20px; margin-bottom: 12px; font-weight: bold;">Custom PHP SEO</h3>
-      <p style="color: #444; font-size: 14px; line-height: 1.6;">Advanced server-side optimization, .htaccess URL rewriting, database-driven meta tags, and dynamic sitemaps.</p>
-    </div>
-
   </div>
 </section>
 
@@ -961,13 +1058,113 @@
           </div>
         </div>
 
-       
+        <div class="portfolio-card">
+  <div class="portfolio-content">
+
+    <h3>Fiver Weather Technologies</h3>
+
+    <p><strong>Client Requirement:</strong> Migrate and optimize a dynamic custom portal to improve crawlability, speed, and ranking for printing services in Miami.</p>
+
+    <p><strong>What I Did:</strong> Configured server-side .htaccess rewrites for clean product URLs, set up database-driven dynamic meta descriptions, fixed 404 header status codes, and coded an automated XML sitemap script.</p>
+
+    <p><strong>SEO Impact:</strong> Seamless search engine indexing, zero duplicate content crawl errors, and boosted organic traffic via optimized meta delivery.</p>
+
+    <div class="chart-bars">
+
+      <div class="bar">
+        <span>Technical SEO Growth</span>
+        <div class="progress">
+          <div style="width:89%"></div>
+        </div>
+      </div>
+
+      <div class="bar">
+        <span>Server Response Time (TTFB)</span>
+        <div class="progress">
+          <div style="width:92%"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="portfolio-links">
+      <a href="https://www.binickimaging.com/" target="_blank">Live Website</a>
+    </div>
+
+  </div>
+</div>
+
 
       </div>
 
     </div>
   </div>
 </section>
+
+
+<!-- Proven Keyword Rankings Section -->
+<section id="proven-rankings">
+  <div class="rankings-header">
+    <h2>Proven Keyword Rankings</h2>
+    <p>High-competition primary keywords successfully ranked on top search results.</p>
+  </div>
+
+  <div class="rankings-container">
+    
+    <!-- Category 1: Travel & Tourism -->
+    <div class="ranking-group-card">
+      <div class="group-title-wrapper">
+        <span class="group-icon">✈️</span>
+        <h3>Travel & Tourism</h3>
+      </div>
+      <div class="keywords-badge-list">
+        <span class="keyword-badge">jim corbett safari booking</span>
+        <span class="keyword-badge">best hotels in jim corbett</span>
+        <span class="keyword-badge">Travel Agency in Uttarakhand</span>
+        <span class="keyword-badge">Tour agency in kedarnath</span>
+      </div>
+    </div>
+
+    <!-- Category 2: Real Estate & Local -->
+    <div class="ranking-group-card">
+      <div class="group-title-wrapper">
+        <span class="group-icon">🏠</span>
+        <h3>Real Estate & Local</h3>
+      </div>
+      <div class="keywords-badge-list">
+        <span class="keyword-badge">Real estate in uttarakhand</span>
+        <span class="keyword-badge">property in haldwani</span>
+        <span class="keyword-badge">plots for sale in gurgaon sohna road</span>
+      </div>
+    </div>
+
+    <!-- Category 3: Finance & Commercial (USA) -->
+    <div class="ranking-group-card">
+      <div class="group-title-wrapper">
+        <span class="group-icon">💵</span>
+        <h3>Finance & Commercial (USA)</h3>
+      </div>
+      <div class="keywords-badge-list">
+        <span class="keyword-badge">California hard money lenders</span>
+        <span class="keyword-badge">Hard Money Secrets</span>
+        <span class="keyword-badge">100% LTV hard money lenders</span>
+      </div>
+    </div>
+
+    <!-- Category 4: Tech & Corporate -->
+    <div class="ranking-group-card">
+      <div class="group-title-wrapper">
+        <span class="group-icon">⚙️</span>
+        <h3>Tech & B2B Services</h3>
+      </div>
+      <div class="keywords-badge-list">
+        <span class="keyword-badge">GPS company in Gurugram</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
 <section id="skills">
   <div class="container">
@@ -1226,6 +1423,30 @@
 
         </div>
 
+       <section id="contact">
+  <div class="container">
+    <div class="section-box">
+
+      <h2 class="section-title">Contact Me</h2>
+
+      <div class="contact-grid">
+
+        <div>
+
+          <form action="https://formspree.io/f/xqenblno" method="POST">
+
+            <input type="text" name="name" placeholder="Your Name" required>
+
+            <input type="email" name="email" placeholder="Your Email" required>
+
+            <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+
+            <button type="submit">Send Message</button>
+
+          </form>
+
+        </div>
+
         <div class="contact-info">
 
           <p><strong>Email:</strong> <a href="mailto:lalitwebe@gmail.com">lalitwebe@gmail.com</a></p>
@@ -1238,11 +1459,11 @@
 
           <div class="social-icons">
 
-            <a href="https://www.instagram.com/lalit_web_expert/?hl=en" target="_blank">
+            <a href="https://www.instagram.com/lalit_lakhchoura/" target="_blank">
               <i class="fab fa-instagram"></i>
             </a>
 
-            <a href="https://www.linkedin.com/in/lalit-lakhchaura-610b13355/" target="_blank">
+            <a href="https://www.linkedin.com/in/lalit-lakhchaura" target="_blank">
               <i class="fab fa-linkedin"></i>
             </a>
 
@@ -1263,7 +1484,6 @@
     </div>
   </div>
 </section>
-
 <footer>
   © 2026 Lalit Web Expert | SEO Expert & Web Designer
 </footer>
